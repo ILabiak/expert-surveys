@@ -3,7 +3,7 @@ home: true
 actionText: Розпочати →
 actionLink: /intro/
 
-footer: "ECL 2.0 Licensed | Copyright © [Readme Experts] [https://github.com/readme-experts]"
+footer: "ECL 2.0 Licensed | Copyright © [Readme Experts] [https://github.com/ILabiak/expert-surveys]"
 ---
 
 
