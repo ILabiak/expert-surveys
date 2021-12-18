@@ -496,5 +496,3 @@ app.put("/api/survey/question/update/:questionid", jsonParse, function (req, res
 
 app.listen(1111);
 ```
-
-[Тестування](https://github.com/ILabiak/expert-surveys/tree/master/test)
