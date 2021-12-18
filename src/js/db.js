@@ -68,18 +68,6 @@ app.put("/api/survey/update/:surveyid", jsonParse, function (req, res) {
     });
 });
 
-app.get("/api/survey/getquestions/:surveyid", function (req, res) {
-    con.connect(function (err) {
-        if (err) throw err;
-
-        con.query(`SELECT * from Question WHERE Survey_id = ${req.params.surveyid}`, (err, result, fields) => {
-            if (err) throw err;
-            result ? res.send(result) : res.sendStatus(404);
-        });
-    });
-});
-
-
 app.get("/api/survey/getsurveystatus/:surveyid", function (req, res) {
     con.connect(function (err) {
         if (err) throw err;
@@ -91,11 +79,11 @@ app.get("/api/survey/getsurveystatus/:surveyid", function (req, res) {
     });
 });
 
-app.put("/api/survey/changesurveystatus/:surveyid", function (req, res) {           // Шлак
+app.get("/api/survey/getquestions/:surveyid", function (req, res) {
     con.connect(function (err) {
         if (err) throw err;
 
-        con.query(`SELECT name from Surveystate WHERE Survey_id = ${req.params.surveyid}`, (err, result, fields) => {
+        con.query(`SELECT * from Question WHERE Survey_id = ${req.params.surveyid}`, (err, result, fields) => {
             if (err) throw err;
             result ? res.send(result) : res.sendStatus(404);
         });
